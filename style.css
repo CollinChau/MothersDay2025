@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css?family=Cascadia+Mono');
+@import url('https://fonts.googleapis.com/css?family=Cal+Sans');
+
+body {
+  font-family: 'Cascadia Mono', cursive !important;
+  background: #D3D3D3;
+  margin: 0px;
+  padding: 0px;
+}
+
+::selection {
+  background: transparent;
+}
+
+h4 {
+  font-size: 18px;
+  line-height: 1px;
+  font-family: 'Cal Sans', cursive !important;
+}
+
+.color1 { color: #D3D3D3; }
+.color2 { color: #D3D3D3; }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #a863fd;
+  color: white;
+  padding: 15px 30px;
+  font-family: 'Cal Sans', sans-serif;
+}
+
+.nav-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Generator Styles */
+.generator-container {
+  text-align: center;
+  padding: 50px;
+  font-family: 'Cal Sans', sans-serif;
+  opacity: 0;
+}
+
+.generator-container button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #a863fd;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.generator-container button:hover {
+  background-color: #7b4edc;
+}
+
+.reason {
+  font-size: 22px;
+  margin-top: 30px;
+  color: #333;
+}
+
+.family-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+#familyImage {
+  width: 100%;
+  max-width: 500px;
+  max-height: 500px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+
+
+/* === Animations === */
+@keyframes fadeInOnly {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeInSlide 1s ease forwards;
+}
+
+.fade-in-delayed {
+  animation: fadeInOnly 1.5s ease forwards;
+}
+
+.fade-in-slow {
+  animation: fadeInSlide 2s ease forwards;
+}
